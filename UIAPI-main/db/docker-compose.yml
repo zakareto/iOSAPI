@@ -3,7 +3,7 @@ version: '3.1'
 services:
 
   mydatabase:
-    image: mariadb:10.7
+    image: mariadb:10.8.2
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: mydbroot
