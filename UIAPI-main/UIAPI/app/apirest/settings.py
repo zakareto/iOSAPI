@@ -81,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'USER': 'mydbuser',
         'PASSWORD': 'mydbpassword',
-        'HOST': 'host.docker.internal',
+        'HOST': '142.93.248.32',
         'PORT': 3307,
         'OPTIONS': {
           'autocommit': True,
