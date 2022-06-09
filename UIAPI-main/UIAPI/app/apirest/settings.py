@@ -25,7 +25,7 @@ SECRET_KEY = 'x68+w!+!lyila9fhu380w)q&x!szim06ki)-+$7rg&c07y5n%0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '142.93.248.32']
 
 
 # Application definition
@@ -81,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'USER': 'mydbuser',
         'PASSWORD': 'mydbpassword',
-        'HOST': 'host.docker.internal',
+        'HOST': '142.93.248.32',
         'PORT': 3307,
         'OPTIONS': {
           'autocommit': True,
