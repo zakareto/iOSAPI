@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+
+  mydatabase:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: mydbroot
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: mydbuser
+      MYSQL_PASSWORD: mydbpassword
+    ports:
+      - 3307:3306
+    volumes:
+      - ./files:/var/lib/mysql/
+      - ./conf:/etc/mysql/conf.d/

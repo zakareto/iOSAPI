@@ -1,0 +1,29 @@
+{% include "header.html" %}
+
+    
+
+<h1 class="display-4" style="text-align: center;"><font style="vertical-align: inherit">AGREGAR VIDEOJUEGO </font></h1>
+    
+        
+        <form role="form" action="{% url 'firstapp:videogamesAdd' %}" method="POST" > 
+            <div class="card-body">
+                <div class="form-group">
+            {% csrf_token %}
+            {{ form.as_p }} <!--el (.as_p) es para dar espacios entre cada input (es como un <br>)-->
+                
+                
+            <input type="submit" class="btn btn-block btn-success btn-lg" value = "agregar" id="idbutton">               
+                </div>
+            </div>
+        </form>
+       
+
+    <br>
+   
+      
+
+
+
+  
+
+{% include "footer.html" %}

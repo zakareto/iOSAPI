@@ -1,0 +1,20 @@
+{% include "header.html" %}
+
+<h1 class="display-4" style="text-align: center;"><font style="vertical-align: inherit">EDITAR VIDEOJUEGO</font></h1>
+    
+        
+        <form role="form" method="POST" > <!-- En este caso la etiqueta <form> no lleva el atributo 'action="" ' ya que en views.py estoy trabajando con una sola función que es "editar", no como eliminar y agregar que me mandan a una función que solo es el html y del html me manda  a la función que elimina (teamsdelete) o agrega (teamsAdd) -->
+            {% csrf_token %}
+            {{ form.as_p }} <!--el (.as_p) es para dar espacios entre cada input (es como un <br>)-->
+                
+                
+            <input type="submit" class="btn btn-block btn-success btn-lg" value = "EDITAR" id="button">               
+        </form>
+       
+
+    <br>
+    
+
+
+
+{% include "footer.html" %}

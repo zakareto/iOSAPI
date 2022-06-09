@@ -1,0 +1,70 @@
+{% include "header.html" %}
+
+
+
+  <h1 class="display-4" style="text-align: center;"><font style="vertical-align: inherit">API DE VIDEOJUEGOS </font></h1>
+
+
+  
+<div class="card-header" style="width:100%; height:auto; padding:20px">
+
+
+ 
+
+
+ 
+  
+
+
+  <div class="bg-gray-dark color-palette">
+
+    <div class="card-header">
+      <h3 class="card-title">Lista de resultados</h3>
+    </div>
+
+  <div class="card-body table-responsive p-0">
+  <table class="table table-hover">
+    <tr>
+    
+      <td><strong>id</strong></td>
+      <td><strong>nombre</strong></td>
+      <td><strong>genero</strong></td>
+      <td><strong>Opciones</strong></td>
+    </tr>
+    {% for obj in videogames.data %}
+      <tr>
+      
+        <td>{{ obj.id }}</td>
+        <td>{{ obj.name }}</td>
+        <td>{{ obj.genre }}</td>
+        <td>
+        <a href="{% url 'firstapp:update' obj.id %}" class="btn btn-block btn-primary" >Editar
+
+        </a> <a href="{% url 'firstapp:delete' obj.id obj.name %}" class="btn btn-block btn-danger btn-lg" >Eliminar</a></td>
+
+        
+
+
+        <script>
+
+        </script>
+     
+
+
+      </tr>
+    {% endfor %}
+  </table>
+</div>
+
+
+<a href="{% url 'firstapp:add' %}" class="btn btn-block btn-outline-secondary btn-lg">Agregar juegos</a>
+</div>
+
+
+
+  
+
+
+</div>
+
+{% include "footer.html" %}

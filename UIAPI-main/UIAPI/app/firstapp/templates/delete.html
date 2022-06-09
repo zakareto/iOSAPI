@@ -1,0 +1,31 @@
+{% include "header.html" %}
+
+<form action="{% url 'firstapp:videogamesdelete' videogameid %}" method="POST">  
+    {% csrf_token %}
+    
+   
+    <div class="alert alert-warning alert-dismissible">
+
+        <a class="close" data-dismiss="alert" aria-hidden="true" href="{% url 'firstapp:vista' %}" id="returndelete">×</a>
+        <h5><i class="icon fas fa-ban"></i> ¡Alerta!</h5>
+        <h1>¿Estas seguro de querer eliminar {{ videogame }}?</h1>
+    
+        <input type="submit" class="btn btn-block btn-outline-danger btn-lg" value = "Si, estoy seguro" id="confirmdelete"> 
+    
+        
+      </div>
+
+</form>
+
+<br>
+
+
+
+
+
+
+
+
+
+
+{% include "footer.html" %}
